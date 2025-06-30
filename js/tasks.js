@@ -1,5 +1,15 @@
 let tasks = [];
 
+function loadTasks() {
+  const saved = localStorage.getItem("tasks");
+  tasks = saved ? JSON.parse(saved) : [];
+  return tasks;
+}
+
+function saveTasks() {
+  localStorage.setItem("tasks", JSON.stringify(tasks));
+}
+
 function addTask() {
   let task = document.getElementById("task-input");
   if (!task) return;
@@ -14,6 +24,7 @@ function addTask() {
 
   tasks.push(taskObject);
   task.value = " ";
+  saveTasks();
   renderTasks();
   updateCount();
 }
@@ -24,6 +35,7 @@ function completeTask(id) {
   if (task) {
     task.completed = !task.completed;
     console.log(task);
+    saveTasks();
     renderTasks();
     updateCount();
   }
@@ -33,6 +45,7 @@ function deleteTask(id) {
   tasks = tasks.filter((task) => task.id != id);
   renderTasks();
   updateCount();
+  saveTasks();
 }
 
 const addTaskBtn = document.getElementById("add-task-btn");
@@ -102,6 +115,10 @@ function updateDashboardCounts(current, completed, pending) {
   cards[2].textContent = pending;
 }
 
-document.addEventListener("DOMContentLoaded", function () {
+function initTasks() {
+  loadTasks();
   renderTasks();
-});
+  updateCount();
+}
+
+document.addEventListener("DOMContentLoaded", initTasks);
