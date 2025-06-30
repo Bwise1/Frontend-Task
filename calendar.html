@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Calendar - TODO App</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="dark">
+    <div class="container">
+      <!-- Side Bar -->
+      <aside class="sidebar">
+        <div class="profile">
+          <img src="assets/man.png" alt="profile image" />
+          <span>Persona1</span>
+        </div>
+        <nav>
+          <ul>
+            <li>
+              <i class="bx bx-tachometer"></i>
+              <a href="index.html">Dashboard</a>
+            </li>
+            <li>
+              <i class="bx bx-task"></i> <a href="mytask.html">My Task</a>
+            </li>
+            <li><i class="bx bx-folder"></i> Projects</li>
+            <li class="active"><i class="bx bx-calendar"></i> Calendar</li>
+            <li>
+              <i class="bx bx-calendar"></i>
+              <a href="about.html">About</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="settings"><i class="bx bx-cog"></i> Settings</div>
+      </aside>
+
+      <main class="main">
+        <header class="top-bar">
+          <div>
+            <h1>CALENDAR</h1>
+            <p>SCHEDULE YOUR MEETINGS AND APPOINTMENTS</p>
+          </div>
+          <div>
+            <button id="toggle-mode">☾</button>
+          </div>
+        </header>
+
+        <!-- Calendly Section -->
+        <section class="calendar-section">
+          <!-- Calendly inline widget begin -->
+          <div
+            class="calendly-inline-widget"
+            data-url="https://calendly.com/benjys"
+            style="min-width: 320px; height: 630px"
+          ></div>
+          <script
+            type="text/javascript"
+            src="https://assets.calendly.com/assets/external/widget.js"
+            async
+          ></script>
+          <!-- Calendly inline widget end -->
+        </section>
+      </main>
+    </div>
+    <script src="js/main.js"></script>
+  </body>
+</html>

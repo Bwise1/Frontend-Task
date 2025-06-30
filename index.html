@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Simple TODO App</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="dark">
+    <div class="container">
+      <!-- Side Bar -->
+      <aside class="sidebar">
+        <div class="profile">
+          <img src="assets/man.png" alt="prifile image" />
+          <span>Persona1</span>
+        </div>
+        <nav>
+          <ul>
+            <li class="active"><i class="bx bx-tachometer"></i> Dashboard</li>
+            <li>
+              <i class="bx bx-task"></i> <a href="mytask.html">My Task</a>
+            </li>
+            <li><i class="bx bx-folder"></i> Projects</li>
+            <li>
+              <i class="bx bx-calendar"></i>
+              <a href="calendar.html">Calendar</a>
+            </li>
+            <li>
+              <i class="bx bx-calendar"></i>
+              <a href="about.html">About</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="settings"><i class="bx bx-cog"></i> Settings</div>
+      </aside>
+
+      <main class="main">
+        <header class="top-bar">
+          <div>
+            <h1>WELCOME BACK, PERSONA 1 👋</h1>
+            <p>LETS CRASH SOME TASK TODAY</p>
+          </div>
+          <div>
+            <button id="toggle-mode">☾</button>
+          </div>
+        </header>
+
+        <!-- cards section -->
+        <section class="status-cards">
+          <div class="card">
+            <h2>COMPLETED TASKS</h2>
+            <p>5</p>
+          </div>
+          <div class="card">
+            <h2>CURRENT TASKS</h2>
+            <p>6</p>
+          </div>
+          <div class="card">
+            <h2>PENDING TASKS</h2>
+            <p>5</p>
+          </div>
+        </section>
+
+        <!-- actions section -->
+        <section class="actions">
+          <a href="#" class="add-task">+ Add a new task</a>
+          <a href="#" class="view-projects">📂 View all projects</a>
+        </section>
+
+        <!-- info section -->
+        <section class="info">
+          <div class="schedule">
+            <h3>Todays Schedule</h3>
+            <ul>
+              <li>09:00 AM ___ Meeting</li>
+              <li>09:00 AM ___ Meeting</li>
+              <li>09:00 AM ___ Meeting</li>
+              <li>09:00 AM ___ Meeting</li>
+              <li>09:00 AM ___ Meeting</li>
+            </ul>
+          </div>
+          <div class="focus">
+            <h3>This Week's focus</h3>
+            <ul>
+              <li>Lauch your Mvp</li>
+              <li>Clean up Figma component</li>
+              <li>Make the file ready for execution</li>
+              <li>Meetin with the developers</li>
+              <li>Start Implementing the project</li>
+            </ul>
+          </div>
+        </section>
+        <section class="bottom">
+          <div class="overview">
+            <h3>Project's Overview</h3>
+            <!-- the width would be the % of completed tasks -->
+            <ul>
+              <li>
+                Work
+                <div class="bar"><div style="width: 85%"></div></div>
+                <span>12 Done</span>
+              </li>
+              <li>
+                Study
+                <div class="bar"><div style="width: 30%"></div></div>
+                <span>4 Done</span>
+              </li>
+              <li>
+                Personal
+                <div class="bar"><div style="width: 60%"></div></div>
+                <span>8 Done</span>
+              </li>
+            </ul>
+          </div>
+          <div class="tips">
+            <h3>Tip of the day</h3>
+            <p>
+              Don't break the chain, Keep it rolling . Momentum Beats Motivation
+            </p>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script src="js/tasks.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

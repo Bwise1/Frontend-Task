@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Tasks - TODO App</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="dark">
+    <div class="container">
+      <!-- Side Bar -->
+      <aside class="sidebar">
+        <div class="profile">
+          <img src="assets/man.png" alt="profile image" />
+          <span>Persona1</span>
+        </div>
+        <nav>
+          <ul>
+            <li>
+              <i class="bx bx-tachometer"></i>
+              <a href="index.html">Dashboard</a>
+            </li>
+            <li class="active"><i class="bx bx-task"></i> My Task</li>
+            <li><i class="bx bx-folder"></i> Projects</li>
+            <li>
+              <i class="bx bx-calendar"></i>
+              <a href="calendar.html">Calendar</a>
+            </li>
+            <li>
+              <i class="bx bx-calendar"></i>
+              <a href="about.html">About</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="settings"><i class="bx bx-cog"></i> Settings</div>
+      </aside>
+
+      <main class="main">
+        <header class="top-bar">
+          <div>
+            <h1>MY TASKS</h1>
+            <p>MANAGE YOUR DAILY TASKS</p>
+          </div>
+          <div>
+            <button id="toggle-mode"></button>
+          </div>
+        </header>
+
+        <!-- Task Input Section -->
+        <section class="task-input">
+          <div class="input-container">
+            <input type="text" id="task-input" placeholder="Add a new task" />
+            <button id="add-task-btn">+</button>
+          </div>
+        </section>
+
+        <!-- Tasks Section -->
+        <section class="tasks-section">
+          <div class="task-category">
+            <h3>Tasks to do - <span id="todo-count">0</span></h3>
+            <div class="task-list" id="todo-list">
+              <div class="task-item">
+                <span class="task-text">To study React fundamentals</span>
+                <div class="task-actions">
+                  <button class="complete-btn">
+                    <i class="bx bx-check"></i>
+                  </button>
+                  <button class="delete-btn">
+                    <i class="bx bx-trash"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="task-item">
+                <span class="task-text">To study React fundamentals</span>
+                <div class="task-actions">
+                  <button class="complete-btn">
+                    <i class="bx bx-check"></i>
+                  </button>
+                  <button class="delete-btn">
+                    <i class="bx bx-trash"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="task-item">
+                <span class="task-text">To study React fundamentals</span>
+                <div class="task-actions">
+                  <button class="complete-btn">
+                    <i class="bx bx-check"></i>
+                  </button>
+                  <button class="delete-btn">
+                    <i class="bx bx-trash"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="task-item">
+                <span class="task-text">To study React fundamentals</span>
+                <div class="task-actions">
+                  <button class="complete-btn">
+                    <i class="bx bx-check"></i>
+                  </button>
+                  <button class="delete-btn">
+                    <i class="bx bx-trash"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="task-category">
+            <h3>Done - <span id="done-count">0</span></h3>
+            <div class="task-list" id="done-list">
+              <div class="task-item completed">
+                <span class="task-text">To study React fundamentals</span>
+                <div class="task-actions"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+    <!-- <script src="js/main.js"></script> -->
+    <script src="js/tasks.js"></script>
+  </body>
+</html>
